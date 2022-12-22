@@ -6,6 +6,7 @@ import { getApp, setApp } from './app'
 
 test.beforeAll(async () => {
   const appInfo = getAppInfo()
+  console.log('App Info', appInfo)
   await test.step('Launch Electron App', async () => {
     // Launch Electron app
     const launchPromise = electron.launch({
