@@ -16,11 +16,10 @@ test.beforeAll(async () => {
     // Set app for other tests to use
     setApp(app)
   })
+})
 
-  await test.step('Wait for the first window', async () => {
-    const app = getApp()
-    const readyPromise = app.waitForEvent('window')
-    await expect(readyPromise, 'App did not become ready').resolves.toBeTruthy()
-    await readyPromise
-  }
+test('Wait for the first window', async () => {
+  const app = getApp()
+  const readyPromise = app.firstWindow()
+  await expect(readyPromise, 'App did not become ready').resolves.toBeTruthy()
 })

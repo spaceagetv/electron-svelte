@@ -3,4 +3,8 @@
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "javascript.preferences.quoteStyle": "single",
+  "typescript.preferences.quoteStyle": "single",
+  "prettier.semi": false,
+  "typescript.format.semicolons": "remove",
 }

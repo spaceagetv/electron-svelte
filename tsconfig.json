@@ -16,7 +16,7 @@
     }
   },
   "include": [
-    "src/**/*",
-    "test/**/*",
+    // we're never running tsc, so it's okay to include all files
+    "**/*",
   ]
 }
