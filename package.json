@@ -1,7 +1,7 @@
 {
   "name": "jjeff-electron-quickstart",
   "productName": "jjeff-electron-quickstart",
-  "version": "1.0.0",
+  "version": "0.0.0-development",
   "description": "My Electron application description",
   "main": ".webpack/main",
   "scripts": {
@@ -11,7 +11,8 @@
     "publish": "electron-forge publish",
     "lint": "eslint --ext .ts,.tsx .",
     "pree2e": "npm run package",
-    "e2e": "playwright test"
+    "e2e": "playwright test",
+    "semantic-release": "semantic-release"
   },
   "keywords": [],
   "author": {
@@ -43,6 +44,7 @@
     "node-loader": "^2.0.0",
     "playwright": "^1.33.0",
     "prettier": "2.8.8",
+    "semantic-release": "^21.0.1",
     "style-loader": "^3.3.2",
     "ts-loader": "^9.4.2",
     "ts-node": "^10.9.1",
@@ -50,5 +52,9 @@
   },
   "dependencies": {
     "electron-squirrel-startup": "^1.0.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jjeff/jjeff-electron-quickstart.git"
   }
 }
