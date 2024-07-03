@@ -1,4 +1,5 @@
 import type { ModuleOptions } from 'webpack'
+import { sveltePreprocess } from 'svelte-preprocess'
 
 export const rules: Required<ModuleOptions>['rules'] = [
   // Add support for native node modules
@@ -25,6 +26,17 @@ export const rules: Required<ModuleOptions>['rules'] = [
       loader: 'ts-loader',
       options: {
         transpileOnly: true,
+      },
+    },
+  },
+  {
+    test: /\.svelte$/,
+    use: {
+      loader: 'svelte-loader',
+      options: {
+        preprocess: sveltePreprocess({
+          typescript: { tsconfigFile: './svelte-tsconfig.json' },
+        }),
       },
     },
   },

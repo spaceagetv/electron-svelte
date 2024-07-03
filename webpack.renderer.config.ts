@@ -3,7 +3,8 @@ import type { Configuration } from 'webpack'
 import { rules } from './webpack.rules'
 import { plugins } from './webpack.plugins'
 
-rules.push(
+const rendererRules = [
+  ...rules,
   {
     test: /\.css$/,
     use: [{ loader: 'style-loader' }, { loader: 'css-loader' }],
@@ -16,15 +17,24 @@ rules.push(
       { loader: 'css-loader' },
       { loader: 'less-loader' },
     ],
-  }
-)
+  },
+]
 
 export const rendererConfig: Configuration = {
   module: {
-    rules,
+    rules: rendererRules,
   },
   plugins,
   resolve: {
-    extensions: ['.js', '.ts', '.jsx', '.tsx', '.css'],
+    extensions: [
+      '.js',
+      '.ts',
+      '.jsx',
+      '.tsx',
+      '.css',
+      '.less',
+      '.json',
+      '.svelte',
+    ],
   },
 }

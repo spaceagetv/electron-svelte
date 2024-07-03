@@ -1,5 +1,13 @@
-// See the Electron documentation for details on how to use preload scripts:
-// https://www.electronjs.org/docs/latest/tutorial/process-model#preload-scripts
+import App from './components/App.svelte'
+
+export let svelteApp: App
+
+// wait for the DOM to be ready
+document.addEventListener('DOMContentLoaded', () => {
+  svelteApp = new App({
+    target: document.body,
+  })
+})
 
 console.log(
   '👋 This message is being logged by "preload.ts", included via webpack'
