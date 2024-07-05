@@ -1,0 +1,8 @@
+{
+  "ignore": {
+    "@vercel/webpack-asset-relocator-loader": {
+      "versions": "1.7.4 - 1.7.5",
+      "reason": "https://github.com/electron/forge/issues/3600"
+    }
+  }
+}

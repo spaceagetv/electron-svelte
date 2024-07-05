@@ -1,7 +1,7 @@
 import type { Configuration } from 'webpack'
 
-import { rules } from './webpack.rules'
 import { plugins } from './webpack.plugins'
+import { rules } from './webpack.rules'
 
 const rendererRules = [
   ...rules,
@@ -36,5 +36,6 @@ export const rendererConfig: Configuration = {
       '.json',
       '.svelte',
     ],
+    mainFields: ['svelte', 'browser', 'module', 'main'],
   },
 }
