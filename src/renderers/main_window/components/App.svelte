@@ -1,14 +1,13 @@
-<script>
-  import { onMount } from 'svelte'
+<script lang="ts">
+  // import 'agnostic-svelte/css/common.min.css'
   import { ipcRenderer } from 'electron'
-  import Component from './Component.svelte'
-  // import Slider from '@smui/slider'
-
-  // keep from being tree-shaken
-  // Component
-  // Slider
+  import { onMount } from 'svelte'
+  import VanillaRangeText from './VanillaRangeText.svelte'
+  ;[VanillaRangeText]
 
   let message = 'Hello from Svelte!'
+  let value = 0
+  let agreed = false
 
   onMount(() => {
     ipcRenderer.on('message', (event, arg) => {
@@ -19,5 +18,5 @@
 
 <main>
   <h1>{message}</h1>
-  <Component />
+  <VanillaRangeText bind:value label={'Vanilla Range + Text'} />
 </main>
