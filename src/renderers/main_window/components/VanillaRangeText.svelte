@@ -11,8 +11,9 @@
   // Dispatch input event whenever the value changes
   $: dispatch('input', { value })
 
-  function selectAll(event) {
-    event.target.select()
+  function selectAll(event: MouseEvent) {
+    const input = event.target as HTMLInputElement
+    input.select()
   }
 </script>
 
