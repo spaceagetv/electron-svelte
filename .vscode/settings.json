@@ -9,6 +9,8 @@
   "typescript.format.semicolons": "remove",
   "cSpell.words": [
     "fontsource",
-    "roboto"
-  ],
+    "rangetext",
+    "roboto",
+    "smui"
+  ]
 }

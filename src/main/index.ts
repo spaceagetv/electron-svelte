@@ -1,5 +1,4 @@
 import { app, BrowserWindow, Menu, MenuItem } from 'electron'
-import log from 'electron-log'
 
 // Handle creating/removing shortcuts on Windows when installing/uninstalling.
 if (require('electron-squirrel-startup')) {
@@ -37,7 +36,7 @@ function addItemToApplicationMenu() {
   if (!menu) {
     throw new Error('Application menu not found')
   }
-  log.info('Application menu found', menu)
+  // log.info('Application menu found', menu)
 
   const menuItem = new MenuItem({
     label: 'Send Message',
